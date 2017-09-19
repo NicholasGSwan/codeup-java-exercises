@@ -30,19 +30,25 @@ public class ConsoleExercises {
         userInputD = sc.nextLine();
         System.out.println(userInputD);
         //calculating perimeter
-        int area;
-        int perimeter;
+        double area;
+        double perimeter;
+        double volume;
         String length;
         String width;
+        String height;
         System.out.println("Give me the length of the room, please: ");
         length = sc.nextLine();
         System.out.println("Now give me the width: ");
         width = sc.nextLine();
-        int lengthInt = Integer.parseInt(length);
-        int widthInt = Integer.parseInt(width);
+        System.out.println("And finally, the height of the room: ");
+        height= sc.nextLine();
+        double heightDbl = Double.parseDouble(height);
+        double lengthInt = Double.parseDouble(length);
+        double widthInt = Double.parseDouble(width);
         area = lengthInt * widthInt;
         perimeter = 2 * lengthInt + 2 * widthInt;
-        System.out.println("The area of the room is "+area+" and the perimeter is "+perimeter+".");
+        volume = heightDbl * lengthInt * widthInt;
+        System.out.println("The area of the room is "+area+" and the perimeter is "+perimeter+". The volume is "+ volume +".");
 
     }
 }
