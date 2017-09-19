@@ -1,25 +1,30 @@
 import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args){
+        //variable declarations
         Scanner userInput;
         userInput = new Scanner(System.in);
         int i = 5;
         int countByTwos = 100;
         long squaringTwo = 2;
+        //while exercise
         while(i <= 15){
             System.out.println(i);
             i++;
         }
+        //do While exercises
         do{
             System.out.println(countByTwos);
             System.out.println("");
             countByTwos -= 5;
 
         }while(countByTwos>=-10);
+
         do{
             System.out.println(squaringTwo);
             squaringTwo *= squaringTwo;
         }while(squaringTwo<100000);
+//        for loop exercises
         for (int j = 5; j <= 15; j++)System.out.println(j);
         for (int j = 0; j <= 100; j+=2) {
             System.out.println(j);
@@ -40,6 +45,8 @@ public class ControlFlowExercises {
             }
             System.out.println(j);
         }
+
+//this is the table of squares and cubes
         System.out.println("What number would you like to go up to?");
         int userInputInt = userInput.nextInt();
         System.out.println("Here is your table!");
@@ -47,7 +54,6 @@ public class ControlFlowExercises {
         System.out.println("number | squared | cubed \n------ | ------- | -----");
         String tableFormat = "%-7d|%-9d|%-7d%n";
         int k = 1;
-
 
         while (true) {
             while (k <= userInputInt){
@@ -64,7 +70,7 @@ public class ControlFlowExercises {
                 break;
             }
         }
-
+// this is the grading exercise
         while (true) {
             System.out.println("What is your numerical grade?");
             int usersGrade = userInput.nextInt();
