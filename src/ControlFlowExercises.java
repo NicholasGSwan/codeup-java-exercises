@@ -1,9 +1,11 @@
+import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args){
+        Scanner userInput;
+        userInput = new Scanner(System.in);
         int i = 5;
         int countByTwos = 100;
         long squaringTwo = 2;
-        int squarer;
         while(i <= 15){
             System.out.println(i);
             i++;
@@ -37,6 +39,54 @@ public class ControlFlowExercises {
                 continue;
             }
             System.out.println(j);
+        }
+        System.out.println("What number would you like to go up to?");
+        int userInputInt = userInput.nextInt();
+        System.out.println("Here is your table!");
+        System.out.println();
+        System.out.println("number | squared | cubed \n------ | ------- | -----");
+        String tableFormat = "%-7d|%-9d|%-7d%n";
+        int k = 1;
+
+
+        while (true) {
+            while (k <= userInputInt){
+                System.out.format(tableFormat, k, k*k, k*k*k);
+                k++;
+            }
+            userInput.nextLine();
+            System.out.println("Would you like to continue? (y/n)");
+            String yesOrNo = userInput.nextLine();
+            if (yesOrNo.equals("y")) {
+                System.out.format(tableFormat, k, k*k, k*k*k);
+                k++;
+            }else {
+                break;
+            }
+        }
+
+        while (true) {
+            System.out.println("What is your numerical grade?");
+            int usersGrade = userInput.nextInt();
+            String usersLetterGrade;
+            if(usersGrade < 60){
+                usersLetterGrade = "F";
+            }else if(usersGrade < 67) {
+                usersLetterGrade = "D";
+            }else if(usersGrade < 80) {
+                usersLetterGrade = "C";
+            }else if(usersGrade < 88) {
+                usersLetterGrade = "B";
+            }else  {
+                usersLetterGrade = "A";
+            }
+            System.out.println("Your grade in that class was: " + usersLetterGrade);
+            userInput.nextLine();
+            System.out.println("Would you like to enter another grade? (y/n)");
+            String yesOrNo = userInput.nextLine();
+            if (yesOrNo.equals("n")) {
+                break;
+            }
         }
 
     }
