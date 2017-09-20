@@ -94,6 +94,18 @@ public class ControlFlowExercises {
                 break;
             }
         }
+        System.out.println("Give a character: ");
+        String characterToRepeat = userInput.nextLine();
+        System.out.println("How many times to repeat:");
+        int howManyTimes = userInput.nextInt();
+        for (int j = 0; j<=howManyTimes; j++){
+            String repeatedCharString = "";
+            for (int l  = 0; l<j; l++){
+                repeatedCharString+=characterToRepeat;
+            }
+            System.out.println(repeatedCharString);
+        }
+
 
     }
 }
