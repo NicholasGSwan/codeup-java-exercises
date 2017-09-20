@@ -23,7 +23,7 @@ public class ControlFlowExercises {
         do{
             System.out.println(squaringTwo);
             squaringTwo *= squaringTwo;
-        }while(squaringTwo<100000);
+        }while(squaringTwo<1000000);
 //        for loop exercises
         for (int j = 5; j <= 15; j++)System.out.println(j);
         for (int j = 0; j <= 100; j+=2) {
@@ -83,8 +83,10 @@ public class ControlFlowExercises {
                 usersLetterGrade = "C";
             }else if(usersGrade < 88) {
                 usersLetterGrade = "B";
-            }else  {
+            }else if(usersGrade<=100) {
                 usersLetterGrade = "A";
+            }else{
+                usersLetterGrade = "Error";
             }
             System.out.println("Your grade in that class was: " + usersLetterGrade);
             userInput.nextLine();
