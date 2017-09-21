@@ -14,7 +14,7 @@ public class Bob {
             userInput = sc.nextLine();
             if (userInput.endsWith("?")){
                 System.out.println(BobQuestionResponse);
-            }else if(userInput.endsWith("!")){
+            }else if(userInput.endsWith("!")|| userInput.equals(userInput.toUpperCase())){
                 System.out.println(BobYellResponse);
             }else if (userInput.isEmpty()){
                 System.out.println(BobIgnoreResponse);
