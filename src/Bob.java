@@ -14,11 +14,12 @@ public class Bob {
             userInput = sc.nextLine();
             if (userInput.endsWith("?")){
                 System.out.println(BobQuestionResponse);
-            }else if(userInput.endsWith("!")|| userInput.equals(userInput.toUpperCase())){
-                System.out.println(BobYellResponse);
-            }else if (userInput.isEmpty()){
+            }else if (userInput.equals("") || userInput.startsWith(" ")&&userInput.endsWith(" ")){
                 System.out.println(BobIgnoreResponse);
-            }else {
+            }else
+                if(userInput.endsWith("!")|| userInput.equals(userInput.toUpperCase())&& !userInput.isEmpty()){
+                System.out.println(BobYellResponse);
+            }else  {
                 System.out.println(BobAnythingElse);
             }
             System.out.println("If you would like to leave, type \"leave\" or \"quit\".");
