@@ -10,6 +10,7 @@ public class MethodsExercises {
 //        System.out.println(modulus(46, 9));
 //        System.out.println(altMult(5, 6));
 //        getInteger(3, 14);
+        otherFactorial(getInteger(1, 20));
         getFactorial();
         rollTheDice();
 
@@ -45,7 +46,7 @@ public class MethodsExercises {
 
         return x + altMult(x, y-1);
     }
-    public static void getInteger(int min, int max){
+    public static int getInteger(int min, int max){
         Scanner sc = new Scanner(System.in);
         while(true) {
             System.out.println("Enter a number between " + min + " and " + max + ": ");
@@ -53,12 +54,11 @@ public class MethodsExercises {
             sc.nextLine();
             if(userInput<max && userInput>min){
                 System.out.println("Thanks! The number you chose is "+userInput+".");
-                break;
+                return userInput;
             }else{
                 System.out.println(userInput+" is not between "+min+" and "+max+". Try again!" );
             }
         }
-
     }
     public static void getFactorial(){
         Scanner sc = new Scanner(System.in);
@@ -120,5 +120,16 @@ public class MethodsExercises {
     }
     public static int randNum(int n){
         return (int)Math.floor((Math.random()* n)+1);
+    }
+    public static void otherFactorial(int number){
+        int acum = 1;
+        for(int i = 1; i <= number; i++){
+            String middleOfThing ="";
+            for(int j = 1; j<=i; j++){
+                middleOfThing += j +" x ";
+            }
+            middleOfThing = middleOfThing.substring(0, middleOfThing.length()-3);
+            System.out.println(i+"! = "+ middleOfThing+" = "+ (acum*=i) );
+        }
     }
 }

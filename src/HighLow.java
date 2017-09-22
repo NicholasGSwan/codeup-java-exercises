@@ -28,8 +28,8 @@ public class HighLow {
 
 
     }
-    public static int randNum(int n){
-        return (int)Math.floor((Math.random()* n)+1);
+    public static int randNum(int max){
+        return (int)Math.floor((Math.random()* max)+1);
     }
 
 }
