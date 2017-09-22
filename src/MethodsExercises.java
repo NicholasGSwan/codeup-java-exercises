@@ -10,7 +10,7 @@ public class MethodsExercises {
 //        System.out.println(modulus(46, 9));
 //        System.out.println(altMult(5, 6));
 //        getInteger(3, 14);
-//        getFactorial();
+        getFactorial();
         rollTheDice();
 
     }
@@ -64,8 +64,11 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
         int userIn;
         long factorial = 1;
+
         while (true) {
+            String factorialString = "";
             while (true) {
+
                 System.out.println("Give a number between 1 and 20:");
                 userIn = sc.nextInt();
                 if (userIn >= 1&& userIn<=20) {
@@ -73,11 +76,17 @@ public class MethodsExercises {
                 }
                 System.out.println("FAILURE! Try again!");
             }
-            for (int i = userIn; i > 1; i--) {
+            String j = String.valueOf(userIn);
+            factorialString += j+"! = ";
+            for (int i = userIn; i >= 1; i--) {
                 factorial *= i;
+                String k = String.valueOf(i);
+                factorialString += k+" x ";
             }
+            factorialString = factorialString.substring(0, factorialString.length()-3);
+            factorialString += " = "+String.valueOf(factorial);
             sc.nextLine();
-            System.out.println("The factorial of " + userIn + " is " + factorial + ".\nWould you like to try another number?(y/n)");
+            System.out.println("The factorial of " + userIn + " is " + factorial + ".\nThis looks like: "+factorialString+"\nWould you like to try another number?(y/n)");
 
                 String letsGo = sc.nextLine();
 //                letsGo = letsGo.substring(0, 1);
