@@ -11,6 +11,10 @@ public class Input {
     String userInput = scanner.nextLine();
     return userInput;
     }
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return getString();
+    }
 
     public boolean yesNo(){
         String yesOrNo = getString();
@@ -20,11 +24,19 @@ public class Input {
             return false;
         }
     }
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        return yesNo();
+    }
 
     public int getInt(){
         System.out.println("Enter a number:");
         int userInput = scanner.nextInt();
         return userInput;
+    }
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        return getInt();
     }
 
 
@@ -45,11 +57,20 @@ public class Input {
         }
         return userIn;
     }
+    public int getInt(int min, int max, String prompt){
+        System.out.println(prompt);
+        return getInt(min, max);
+    }
 
     public double getDouble(){
         System.out.println("Enter a number:");
         double userInput = scanner.nextDouble();
         return userInput;
+    }
+
+    public double getDouble(String prompt){
+        System.out.println(prompt);
+        return getDouble();
     }
 
     public double getDouble(double min, double max){
@@ -67,6 +88,10 @@ public class Input {
             }
         }
         return userIn;
+    }
+    public double getDouble(double min, double max, String prompt){
+        System.out.println(prompt);
+        return getDouble(min, max);
     }
 
 }
