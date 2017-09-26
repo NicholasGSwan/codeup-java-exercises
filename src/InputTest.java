@@ -9,25 +9,25 @@ public class InputTest {
         boolean userBool;
         int userInt;
         double userDoub;
-        userInput= inputTest.getString();
+        userInput= inputTest.getString("Enter a Sentence");
         System.out.println(userInput);
 
         userBool = inputTest.yesNo();
         System.out.println(userBool);
 
-        userInt = inputTest.getInt();
+        userInt = inputTest.getInt("Enter a Number");
         System.out.println(userInt);
 
-        userInt = inputTest.getInt(1, 20);
+        userInt = inputTest.getInt(1, 20, "Enter a Number");
         System.out.println(userInt);
 
-        userDoub = inputTest.getDouble();
+        userDoub = inputTest.getDouble("Enter a Number");
         System.out.println(userDoub);
 
-        userDoub = inputTest.getDouble(3, 90);
+        userDoub = inputTest.getDouble(3, 90, "Enter a Number");
         System.out.println(userDoub);
 
-        userInput = inputTest.getString();
+        userInput = inputTest.getString("Enter a sentence.");
         System.out.println(userInput);
 
     }

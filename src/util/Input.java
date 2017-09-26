@@ -3,11 +3,13 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+
+    public Input(){
+        scanner = new Scanner(System.in);
+    }
 
     public String getString(){
-    System.out.println("Please enter:");
-    scanner.nextLine();
     String userInput = scanner.nextLine();
     return userInput;
     }
@@ -17,12 +19,9 @@ public class Input {
     }
 
     public boolean yesNo(){
+        System.out.print("y/n");
         String yesOrNo = getString();
-        if (yesOrNo.equalsIgnoreCase("yes")||yesOrNo.equalsIgnoreCase("y")){
-            return true;
-        }else{
-            return false;
-        }
+        return yesOrNo.equalsIgnoreCase("yes")||yesOrNo.equalsIgnoreCase("y");
     }
     public boolean yesNo(String prompt){
         System.out.println(prompt);
@@ -30,8 +29,8 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Enter a number:");
         int userInput = scanner.nextInt();
+        scanner.nextLine();
         return userInput;
     }
     public int getInt(String prompt){
@@ -49,7 +48,6 @@ public class Input {
             if (userIn > max|| userIn < min){
                 System.out.println("Try again...");
             }else if(userIn <= max && userIn >= min){
-                System.out.println("Awesome!");
                 break;
             }else {
                 System.out.println("not sure what happened...");
@@ -63,8 +61,8 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a number:");
         double userInput = scanner.nextDouble();
+        scanner.nextLine();
         return userInput;
     }
 
@@ -76,12 +74,11 @@ public class Input {
     public double getDouble(double min, double max){
         double userIn;
         while (true) {
-            System.out.println("Between " + min + " and " + max + ",");
+            System.out.print(" between " + min + " and " + max + ",");
             userIn = getDouble();
             if (userIn > max|| userIn < min){
                 System.out.println("Try again...");
             }else if(userIn <= max && userIn >= min){
-                System.out.println("Awesome!");
                 break;
             }else {
                 System.out.println("not sure what happened...");
