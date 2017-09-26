@@ -20,7 +20,6 @@ public class ServerNameGenerator {
        ServerNameGenerator server = new ServerNameGenerator();
        String randomName = server.getRandomArrayElement(server.adjectivesArray)+"-"+server.getRandomArrayElement(server.nounsArray);
        System.out.println(randomName);}while(input.yesNo("Again?"));
-
    }
 
 }
