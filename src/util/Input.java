@@ -43,7 +43,7 @@ public class Input {
     public int getInt(int min, int max){
         int userIn;
         while (true) {
-            System.out.println("Between " + min + " and " + max + ",");
+//            System.out.println("Between " + min + " and " + max + ",");
             userIn = getInt();
             if (userIn > max|| userIn < min){
                 System.out.println("Try again...");
