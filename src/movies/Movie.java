@@ -8,4 +8,10 @@ public class Movie {
         this.name = name;
         this.category = category;
     }
+    public String getName(){
+        return this.name;
+    }
+    public String getCategory(){
+        return this.category;
+    }
 }
