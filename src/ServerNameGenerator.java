@@ -5,7 +5,7 @@ public class ServerNameGenerator {
    public String[] nounsArray = {"book", "owl", "guitar", "keyboard", "refrigerator", "taco", "car", "vampire", "piggy", "slippers"};
 
     public int randNum(int max, int min){
-        return (int)Math.floor((Math.random()* max)+ min);
+        return (int)Math.floor((Math.random()* (max-min))+ min);
     }
     public int randNum(int max){
         return randNum(max, 0);
