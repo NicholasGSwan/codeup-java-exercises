@@ -36,7 +36,7 @@ public class MovieApplication {
                         break;
                     case 7:
                         movies = mA.addNewMovie(movies);
-                        menuChoice = -1;
+//                        menuChoice = -1;
                         break;
 
 
