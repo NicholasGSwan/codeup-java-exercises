@@ -3,9 +3,9 @@ package shapes;
 public class Rectangle {
     protected int length;
     protected int width;
-    public Rectangle(){
-
-    }
+//    public Rectangle(){
+//
+//    }
 
     public Rectangle(int length, int width){
         this.length = length;
