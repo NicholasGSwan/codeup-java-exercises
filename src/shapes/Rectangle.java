@@ -18,6 +18,14 @@ public class Rectangle {
         this.width=width;
     }
 
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
     public int getPerimeter(){
         return 2*length + 2*width;
     }
