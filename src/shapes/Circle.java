@@ -1,6 +1,6 @@
 package shapes;
 
-public class Circle {
+public class Circle extends Shape{
     private double radius;
     private static int numberOfCircles;
 
@@ -9,15 +9,16 @@ public class Circle {
         numberOfCircles++;
     }
 
+    @Override
+    public double getPerimeter() {
+        return this.radius*2*Math.PI;
+    }
+
     public double getArea(){
         double area = this.radius * this.radius * Math.PI;
         return area;
     }
 
-    public double getCircumference(){
-        double circum = 2 * this.radius * Math.PI;
-        return circum;
-    }
 
     public static void displayNumOfCircles(){
         String plural = " circle.";
