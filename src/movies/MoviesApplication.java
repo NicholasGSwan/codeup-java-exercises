@@ -3,9 +3,9 @@ import util.Input;
 
 import java.util.Arrays;
 
-public class MovieApplication {
+public class MoviesApplication {
     public static void main(String[] args) {
-        MovieApplication mA = new MovieApplication();
+        MoviesApplication mA = new MoviesApplication();
         Movie[] movies =MoviesArray.findAll();
         Input input = new Input();
         int caseNumbers =7;
@@ -52,7 +52,7 @@ public class MovieApplication {
         System.out.println("Title: " + movie.getName() + " || Category: " + movie.getCategory());
     }
     public void printCategory(String category, Movie[] movies){
-        MovieApplication mA = new MovieApplication();
+        MoviesApplication mA = new MoviesApplication();
         for(Movie movie: movies) {
             if (movie.getCategory().equals(category)) {
                 mA.printMovieTitle(movie);

@@ -10,7 +10,7 @@ public class CircleApp {
         while(true) {
             System.out.println("Enter the radius of the circle");
             Circle thisCircle = new Circle(input.getDouble());
-            System.out.println("The area of the circle is:" + thisCircle.getArea() + "\nThe circumference is: " + thisCircle.getCircumference() + ".");
+            System.out.println("The area of the circle is:" + thisCircle.getArea() + "\nThe circumference is: " + thisCircle.getPerimeter() + ".");
             System.out.println("Would you like to make another circle?");
             userBool = input.yesNo();
             if (!userBool){
