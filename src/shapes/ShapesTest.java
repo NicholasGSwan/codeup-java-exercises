@@ -13,6 +13,7 @@ public class ShapesTest {
         Measurable myShape = new Rectangle(7, 9);
         showQuadrilateralInfo(myShape);
         //can't getLength or getWidth because myShape is Measurable "class"
+        //the type determines what methods can be called on a variable
 
     }
     public static void showQuadrilateralInfo(Measurable rectangle){
