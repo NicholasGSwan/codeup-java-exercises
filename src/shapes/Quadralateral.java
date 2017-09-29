@@ -1,6 +1,7 @@
 package shapes;
 
 abstract class Quadralateral extends Shape {
+    //I know quadrilateral is spelled wrong, the exercises told me too :(
     protected double length;
     protected double width;
 
