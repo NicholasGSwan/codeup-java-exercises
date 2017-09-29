@@ -3,7 +3,7 @@ package shapes;
 public class ShapesTest {
     public static void main(String[] args){
         Rectangle box1 =new Rectangle (5, 4);
-        Quadrilateral box2 = new Square (5);
+        Quadralateral box2 = new Square (5);
         Square box3 = new Square(7);
 
         System.out.println(box1.getArea()+"\n"+box1.getPerimeter());
