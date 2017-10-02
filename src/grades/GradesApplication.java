@@ -66,7 +66,7 @@ public class GradesApplication {
                 break;
             }else if(userIn.equalsIgnoreCase("options")){
                 printOptions(options);
-                int userIn2 = input.getInt("Which option?(input number)");
+                int userIn2 = input.getInt(1, 3, "Which option?(input number)");
                 switch(userIn2){
                     case 1: printCsvFormat(students);
                     break;
