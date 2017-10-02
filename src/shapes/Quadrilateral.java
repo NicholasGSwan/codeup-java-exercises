@@ -1,12 +1,12 @@
 package shapes;
 
-abstract class Quadralateral extends Shape {
+abstract class Quadrilateral extends Shape {
     //I know quadrilateral is spelled wrong, the exercises told me too :(
     protected double length;
     protected double width;
 
 
-    public Quadralateral(double length, double width){
+    public Quadrilateral(double length, double width){
         this.length = length;
         this.width = width;
     }
