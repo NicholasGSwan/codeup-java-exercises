@@ -1,14 +1,17 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Student {
     private String name;
     private ArrayList<Integer> grades;
+    private HashMap<String, String> attendance;
 
     public Student(String name){
         this.name = name;
         grades = new ArrayList<>();
+        attendance = new HashMap<>();
     }
 
 
@@ -31,6 +34,9 @@ public class Student {
         grades.add(grade);
 
     }
+    public void recordAttendance(String date, String presentOrAbsent){
+        attendance.put(date, presentOrAbsent);
+    }
     public double getGradeAverage(){
         int gradeToBeAveraged = 0;
         for(int grade: grades){
@@ -42,6 +48,24 @@ public class Student {
     public void displayAllGrades(){
         for(int grade: this.grades){
             System.out.print(grade+"\n");
+        }
+    }
+    public double attendancePercent(){
+        double numberOfDays = 0;
+        double numberOfPs = 0;
+        for(String pOrA: attendance.values()) {
+            numberOfDays++;
+            if (pOrA.equalsIgnoreCase("p")) {
+                numberOfPs++;
+            }
+        }
+        return (numberOfPs/numberOfDays)*100;
+    }
+    public void whenTheyWereAbsent(){
+        for(String dates: attendance.keySet()){
+            if(attendance.get(dates).equalsIgnoreCase("a")){
+                System.out.println(dates);
+            }
         }
     }
 

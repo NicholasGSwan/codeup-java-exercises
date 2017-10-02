@@ -17,18 +17,34 @@ public class GradesApplication {
         Student tomas = new Student ("Tomas Hipolito");
         Student jordan = new Student ("Jordan Leslie");
         Student terrell = new Student ("Terrell");
+        nicholas.recordAttendance("2017-10-02","p");
+        nicholas.recordAttendance("2017-10-03","p");
+        nicholas.recordAttendance("2017-10-04","a");
+        nicholas.recordAttendance("2017-10-05","p");
         nicholas.addGrade(78);
         nicholas.addGrade(87);
         nicholas.addGrade(92);
         nicholas.addGrade(100);
+        tomas.recordAttendance("2017-10-02","a");
+        tomas.recordAttendance("2017-10-03","a");
+        tomas.recordAttendance("2017-10-04","p");
+        tomas.recordAttendance("2017-10-05","p");
         tomas.addGrade(80);
         tomas.addGrade(95);
         tomas.addGrade(97);
         tomas.addGrade(98);
+        jordan.recordAttendance("2017-10-02","p");
+        jordan.recordAttendance("2017-10-03","p");
+        jordan.recordAttendance("2017-10-04","a");
+        jordan.recordAttendance("2017-10-05", "a");
         jordan.addGrade(90);
         jordan.addGrade(97);
         jordan.addGrade(98);
         jordan.addGrade(100);
+        terrell.recordAttendance("2017-10-02","p");
+        terrell.recordAttendance("2017-10-03","p");
+        terrell.recordAttendance("2017-10-04","p");
+        terrell.recordAttendance("2017-10-05","p");
         terrell.addGrade(95);
         terrell.addGrade(91);
         terrell.addGrade(98);
@@ -79,6 +95,9 @@ public class GradesApplication {
         System.out.println("Name: "+ student.getName()+"\nTheir grades are:\n");
         student.displayAllGrades();
         System.out.println("Average: "+student.getGradeAverage());
+        System.out.println("Attendance Percentage: "+ student.attendancePercent()+"%");
+        System.out.println("They were absent on:");
+        student.whenTheyWereAbsent();
 
         System.out.println("\n\n");
     }
