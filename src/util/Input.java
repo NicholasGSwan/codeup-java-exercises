@@ -29,9 +29,12 @@ public class Input {
     }
 
     public int getInt(){
-        int userInput = scanner.nextInt();
-        scanner.nextLine();
-        return userInput;
+            try {
+                return Integer.valueOf(getString());
+            } catch (NumberFormatException e) {
+                System.out.println("Not an integer, try again.");
+                return getInt();
+            }
     }
     public int getInt(String prompt){
         System.out.println(prompt);
@@ -61,9 +64,12 @@ public class Input {
     }
 
     public double getDouble(){
-        double userInput = scanner.nextDouble();
-        scanner.nextLine();
-        return userInput;
+        try {
+            return Double.valueOf(getString());
+        }catch (Exception e){
+            System.out.println("Not a valid number, try again.");
+            return getDouble();
+        }
     }
 
     public double getDouble(String prompt){
@@ -89,6 +95,32 @@ public class Input {
     public double getDouble(double min, double max, String prompt){
         System.out.println(prompt);
         return getDouble(min, max);
+    }
+    public int getHex(){
+        String userInput = scanner.nextLine();
+        try {
+            return Integer.valueOf(userInput, 16);
+        } catch (NumberFormatException e) {
+            System.out.println("Not an integer, try again.");
+            return getInt();
+        }
+    }
+    public int getHex(String prompt){
+        System.out.println(prompt);
+        return getHex();
+    }
+    public int getBinary(){
+        String userInput = scanner.nextLine();
+        try {
+            return Integer.valueOf(userInput, 2);
+        } catch (NumberFormatException e) {
+            System.out.println("Not an integer, try again.");
+            return getInt();
+        }
+    }
+    public int getBinary(String prompt){
+        System.out.println(prompt);
+        return getBinary();
     }
 
 }
