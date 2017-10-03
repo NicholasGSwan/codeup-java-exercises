@@ -97,9 +97,9 @@ public class Input {
         return getDouble(min, max);
     }
     public int getHex(){
-        String userInput = scanner.nextLine();
+
         try {
-            return Integer.valueOf(userInput, 16);
+            return Integer.valueOf(getString(), 16);
         } catch (NumberFormatException e) {
             System.out.println("Not an integer, try again.");
             return getInt();
@@ -110,9 +110,9 @@ public class Input {
         return getHex();
     }
     public int getBinary(){
-        String userInput = scanner.nextLine();
+
         try {
-            return Integer.valueOf(userInput, 2);
+            return Integer.valueOf(getString(), 2);
         } catch (NumberFormatException e) {
             System.out.println("Not an integer, try again.");
             return getInt();
